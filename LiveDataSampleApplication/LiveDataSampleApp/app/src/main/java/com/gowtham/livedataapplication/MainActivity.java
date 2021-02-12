@@ -15,20 +15,20 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    Button addScoreButton, resetScoreButton;
-    TextView scoreTextView;
+    private Button addScoreButton;
+    private Button resetScoreButton;
+    private TextView scoreTextView;
 
-    //    Integer score = 0;
-    MainActivityViewModel mainActivityViewModel;
+    private MainActivityViewModel mainActivityViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        scoreTextView = findViewById(R.id.scoreTextView);
-        addScoreButton = findViewById(R.id.addScoreButton);
-        resetScoreButton = findViewById(R.id.resetScoreButton);
+        scoreTextView = findViewById(R.id.tvScore);
+        addScoreButton = findViewById(R.id.btnAddScore);
+        resetScoreButton = findViewById(R.id.btnResetScore);
 
         mainActivityViewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
 
