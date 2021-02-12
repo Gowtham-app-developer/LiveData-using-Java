@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner {
 
     }
 
-
     Observer<ArrayList<User>> userListUpdateObserver = new Observer<ArrayList<User>>() {
         @Override
         public void onChanged(ArrayList<User> userArrayList) {
@@ -43,6 +41,5 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner {
             recyclerView.setAdapter(recyclerViewAdapter);
         }
     };
-
 
 }
